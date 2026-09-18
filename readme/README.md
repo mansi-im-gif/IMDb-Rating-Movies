@@ -1,64 +1,129 @@
-# IMDb Top 1000 Movies Scraper & Power BI Pipeline
+# 🎬 IMDb Movies & Series Rating Analysis
 
-This project extracts, standardizes, and exports a clean dataset of IMDb's Top 1000 movies, engineered specifically for direct ingestion into **Power BI Desktop** and **Power BI Service**.
+An end-to-end **Data Analytics project** that analyzes IMDb movies and series using **Python, Pandas, and Power BI**. The project explores IMDb ratings, release trends, genres, runtime, certificates, and directors through an interactive dashboard.
 
----
+## 📌 Project Overview
 
-## 📁 Workspace Files
+This project uses a dataset of **1,000 IMDb movies and series** to identify patterns and trends across ratings, release years, genres, runtime, certificates, and directors.
 
-| File | Description |
-| :--- | :--- |
-| **`imdb_scraper.py`** | Complete Python scraping & cleaning script containing all required functions (`get_page`, `parse_listing`, `parse_movie_page`, `clean_data`, `export_csv`). |
-| **`imdb_top_1000_movies.csv`** | Clean, analysis-ready CSV dataset with 1,000 rows and 8 standardized columns, exported with `UTF-8 with BOM` for Power BI. |
-| **`requirements.txt`** | Python library dependencies (`requests`, `beautifulsoup4`, `pandas`, `numpy`, `lxml`). |
+The workflow covers:
 
----
+**Data Collection → Data Cleaning → Exploratory Analysis → Data Transformation → Power BI Dashboard → Insights**
 
-## 🚀 How to Run in VS Code
+## 🛠️ Tools & Technologies
 
-### 1. Open Terminal in VS Code
-Press ``Ctrl + ` `` (or navigate to **Terminal** > **New Terminal**).
+* **Python**
+* **Pandas**
+* **Web Scraping**
+* **Power BI**
+* **Power Query**
+* **DAX**
+* **Git & GitHub**
 
-### 2. Install Dependencies (if not already installed)
+## 📊 Dashboard Features
+
+The Power BI dashboard includes:
+
+* Total Movies & Series
+* Average and Highest IMDb Rating
+* Average Runtime
+* Oldest and Latest Release Year
+* Number of Genres and Directors
+* IMDb Rating Distribution
+* Movies/Series by Release Year
+* Genre Analysis
+* Certificate Distribution
+* Runtime Analysis
+* Decade-wise Rating Trends
+* Director Analysis
+* Top-Rated Movies/Series
+* Interactive slicers for filtering the analysis
+
+## 🔎 Key Analysis Areas
+
+### ⭐ IMDb Ratings
+
+Analyzes the distribution of IMDb ratings and identifies highly rated titles.
+
+### 🎭 Genre Analysis
+
+Examines the distribution and popularity of different movie and series genres.
+
+### 📅 Release Trends
+
+Explores how the number of titles and ratings have changed across release years and decades.
+
+### ⏱️ Runtime Analysis
+
+Groups titles into runtime categories to understand the distribution of movie/series lengths.
+
+### 🎬 Director Analysis
+
+Examines directors based on the number of titles and associated IMDb ratings.
+
+### 🔞 Certificate Analysis
+
+Analyzes the distribution of titles across different certification categories.
+
+## 📁 Project Structure
+
+```text
+IMDb-Rating-Movies/
+│
+├── code/
+│   └── imdb_scraper.py
+│
+├── data/
+│   └── imdb_top_1000_movies_20260911_205646.csv
+│
+├── power bi/
+│   └── imdb_rating.pbix
+│
+├── readme/
+│   └── README.md
+│
+├── requirements.txt
+│
+└── .gitignore
+```
+
+## ⚙️ How to Run
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/mansi-im-gif/IMDb-Rating-Movies.git
+cd IMDb-Rating-Movies
+```
+
+### 2. Install dependencies
+
 ```bash
 pip install -r requirements.txt
 ```
 
-### 3. Execute the Pipeline
-You can run the script with several modes:
+### 3. Run the Python scraper
 
 ```bash
-# Default mode: Attempts live scraping with automatic fallback on AWS WAF challenge
-python imdb_scraper.py
-
-# Force canonical Top 1000 reference dataset mode (instant execution)
-python imdb_scraper.py --source kaggle
-
-# Target a custom row count or output file
-python imdb_scraper.py --target 1000 --output imdb_top_1000_movies.csv
+python code/imdb_scraper.py
 ```
 
----
+### 4. Open the Power BI dashboard
 
-## 📊 Dataset Schema (8 Columns for Power BI)
+Open:
 
-| Column Name | Power BI Data Type | Description |
-| :--- | :--- | :--- |
-| **`Series Title`** | Text (`str`) | Movie name, stripped of rank numbers, HTML tags, and redundant whitespace. |
-| **`Release Year`** | Whole Number (`Int64`) | 4-digit release year (1880–2099). |
-| **`Certificate`** | Text (`str`) | Standardized MPAA/CBFC categories: `U`, `UA`, `A`, `R`, `PG`, `PG-13`, `Approved`, `Not Specified`. |
-| **`Runtime`** | Whole Number (`Int64`) | Duration in minutes (numeric only, "min" removed). |
-| **`Genre`** | Text (`str`) | Clean comma-separated list of genres (e.g., `Action, Crime, Drama`). |
-| **`IMDb Rating`** | Decimal Number (`float64`) | Rating out of 10 rounded to 1 decimal place. |
-| **`Overview`** | Text (`str`) | Plot summary cleaned of HTML entities and special characters. |
-| **`Director`** | Text (`str`) | Name(s) of the director(s), comma-separated if multiple. |
+```text
+power bi/imdb_rating.pbix
+```
 
----
+using **Microsoft Power BI Desktop**.
 
-## 📈 Importing into Power BI
+## 📈 Project Outcome
 
-1. Open **Power BI Desktop**.
-2. Click **Get Data** > **Text/CSV**.
-3. Select `imdb_top_1000_movies.csv` from this folder.
-4. Click **Load**. All 8 columns will be detected with their native data types with zero manual transformations required.
+The project demonstrates an end-to-end analytics workflow, from **data collection and preprocessing to interactive business-style visualization**, using Python and Power BI.
 
+## 👩‍💻 Author
+
+**Mansi Mann Priya**
+
+Data Analytics | Python | SQL | Power BI | Excel
