@@ -1,71 +1,89 @@
 # 🎬 IMDb Movies & Series Rating Analysis
 
-An end-to-end **Data Analytics project** that analyzes IMDb movies and series using **Python, Pandas, and Power BI**. The project explores IMDb ratings, release trends, genres, runtime, certificates, and directors through an interactive dashboard.
-
 ## 📌 Project Overview
 
-This project uses a dataset of **1,000 IMDb movies and series** to identify patterns and trends across ratings, release years, genres, runtime, certificates, and directors.
+This project analyzes **1,000 IMDb movies and series** using Python and Power BI to explore ratings, genres, release trends, runtime, certificates, and directors.
 
-The workflow covers:
+The project covers the complete data analytics workflow — from **data collection and cleaning to exploratory analysis and interactive dashboard creation**.
 
-**Data Collection → Data Cleaning → Exploratory Analysis → Data Transformation → Power BI Dashboard → Insights**
+---
 
 ## 🛠️ Tools & Technologies
 
-* **Python**
-* **Pandas**
-* **Web Scraping**
-* **Power BI**
-* **Power Query**
-* **DAX**
-* **Git & GitHub**
+* **Python** — Data collection and preprocessing
+* **Pandas** — Data cleaning and transformation
+* **Web Scraping** — IMDb data extraction
+* **Power BI** — Interactive dashboard and visualization
+* **Power Query** — Data transformation
+* **DAX** — Calculated columns and analytical measures
+* **Git & GitHub** — Version control and project sharing
+
+---
 
 ## 📊 Dashboard Features
 
-The Power BI dashboard includes:
+The Power BI dashboard provides interactive analysis of:
 
-* Total Movies & Series
-* Average and Highest IMDb Rating
-* Average Runtime
-* Oldest and Latest Release Year
-* Number of Genres and Directors
-* IMDb Rating Distribution
-* Movies/Series by Release Year
-* Genre Analysis
-* Certificate Distribution
-* Runtime Analysis
-* Decade-wise Rating Trends
-* Director Analysis
-* Top-Rated Movies/Series
-* Interactive slicers for filtering the analysis
+* 🎯 Total Movies / Series
+* ⭐ Average & Highest IMDb Rating
+* ⏱️ Average Runtime
+* 📅 Oldest & Latest Release Year
+* 🎭 Genre Distribution
+* 🎬 Director Analysis
+* 🏆 Top-Rated Movies / Series
+* 📈 IMDb Rating Distribution
+* 📆 Release Trends by Year & Decade
+* ⏳ Runtime Category Analysis
+* 🔖 Certificate Distribution
+
+### Interactive Filters
+
+Users can explore the dashboard using slicers for:
+
+* Release Year
+* Genre
+* Certificate
+* IMDb Rating
+* Runtime
+* Director
+
+---
 
 ## 🔎 Key Analysis Areas
 
-### ⭐ IMDb Ratings
+### ⭐ Rating Analysis
 
-Analyzes the distribution of IMDb ratings and identifies highly rated titles.
+* Distribution of IMDb ratings
+* Highest-rated titles
+* Rating trends across decades
 
 ### 🎭 Genre Analysis
 
-Examines the distribution and popularity of different movie and series genres.
+* Most common genres
+* Genre-wise rating patterns
+* Comparison of different movie/series categories
 
 ### 📅 Release Trends
 
-Explores how the number of titles and ratings have changed across release years and decades.
+* Number of releases by year
+* Decade-wise release patterns
+* Changes in ratings across different periods
 
 ### ⏱️ Runtime Analysis
 
-Groups titles into runtime categories to understand the distribution of movie/series lengths.
+* Average runtime
+* Runtime categories
+* Relationship between runtime and ratings
 
 ### 🎬 Director Analysis
 
-Examines directors based on the number of titles and associated IMDb ratings.
+* Number of titles by director
+* Director-wise rating analysis
+* Directors associated with highly rated titles
 
-### 🔞 Certificate Analysis
+---
 
-Analyzes the distribution of titles across different certification categories.
-
-## 📁 Project Structure
+## 📂 Project Structure
 
 ```text
 IMDb-Rating-Movies/
@@ -76,39 +94,68 @@ IMDb-Rating-Movies/
 ├── data/
 │   └── imdb_top_1000_movies_20260911_205646.csv
 │
+├── images/
+│   ├── Screenshot (5).png
+│   ├── Screenshot (6).png
+│   ├── Screenshot (7).png
+│   ├── Screenshot (8).png
+│   ├── Screenshot (9).png
+│   ├── Screenshot (10).png
+│   └── Screenshot (11).png
+│
 ├── power bi/
 │   └── imdb_rating.pbix
 │
 ├── readme/
 │   └── README.md
 │
-├── requirements.txt
-│
-└── .gitignore
+├── .gitignore
+└── requirements.txt
 ```
 
-## ⚙️ How to Run
+---
+
+## 🧹 Data Processing
+
+The dataset was processed using Python and Power Query to:
+
+* Clean and structure scraped IMDb data
+* Handle missing values
+* Convert numerical fields into appropriate data types
+* Categorize movie runtimes
+* Create release-year/decade classifications
+* Extract primary genres for analysis
+* Prepare the dataset for Power BI visualization
+
+---
+
+## 📈 Dashboard Screenshots
+
+Screenshots of the Power BI dashboard are available in the [`images`](../images/) folder.
+
+---
+
+## 🚀 How to Run the Project
 
 ### 1. Clone the repository
 
 ```bash
 git clone https://github.com/mansi-im-gif/IMDb-Rating-Movies.git
-cd IMDb-Rating-Movies
 ```
 
-### 2. Install dependencies
+### 2. Install required Python libraries
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 3. Run the Python scraper
+### 3. Run the scraper
 
 ```bash
 python code/imdb_scraper.py
 ```
 
-### 4. Open the Power BI dashboard
+### 4. Open the Power BI Dashboard
 
 Open:
 
@@ -116,14 +163,34 @@ Open:
 power bi/imdb_rating.pbix
 ```
 
-using **Microsoft Power BI Desktop**.
+in **Microsoft Power BI Desktop**.
 
-## 📈 Project Outcome
+---
 
-The project demonstrates an end-to-end analytics workflow, from **data collection and preprocessing to interactive business-style visualization**, using Python and Power BI.
+## 🎯 Project Outcome
+
+This project demonstrates practical skills in:
+
+* Web Scraping
+* Python & Pandas
+* Data Cleaning
+* Exploratory Data Analysis
+* Power Query
+* DAX
+* Data Visualization
+* Dashboard Development
+* Git & GitHub
+
+It showcases an end-to-end **Data Analytics workflow**, from raw data collection to interactive business-style insights.
+
+---
 
 ## 👩‍💻 Author
 
 **Mansi Mann Priya**
 
-Data Analytics | Python | SQL | Power BI | Excel
+Aspiring Data Analyst | Python | SQL | Excel | Power BI
+
+## 📊 Power BI Dashboard
+
+[Download the Power BI Dashboard](./powerbi/imdb_rating.pbix)
